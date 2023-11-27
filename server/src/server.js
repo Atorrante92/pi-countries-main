@@ -1,3 +1,4 @@
+//LA FUNCIÓN DE ESTE MÓDULO ES CREAR EL SERVIDOR Y DEFINIR ALGUNOS MIDDLEWARES A UTILIZAR
 const express = require("express");
 const router = require("./routes");
 const morgan = require("morgan");
