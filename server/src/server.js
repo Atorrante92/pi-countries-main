@@ -8,7 +8,7 @@ const server = express();
 
 server.use(morgan("dev"));
 server.use(express.json());
-server.use(cors());
+server.use(cors());                 //Con esto le digo a mi server que puede comunicarse con cualquier tipo de cliente (Hay formas de seleccionar que tipo de cliente se comunican con mi server)
 
 server.use(router);
 

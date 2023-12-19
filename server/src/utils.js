@@ -3,16 +3,16 @@ const { Country } = require('./db');
 
 const cleanPropsCountries = (arr) => {
     const newArr = arr.map((country) => {
-      return {
-        id: country.cca3,
-        name: country.name.common,
-        flags: country.flags.png,
-        continents: country.continents[0],
-        capital: Array.isArray(country.capital) && country.capital.length ? country.capital[0] : 'No tiene capital',
-        subregion: country.subregion,
-        area: country.area,
-        population: country.population
-      }
+        return {
+            id: country.cca3,
+            name: country.name.common,
+            flags: country.flags.png,
+            continents: country.continents[0],
+            capital: Array.isArray(country.capital) && country.capital.length ? country.capital[0] : 'No tiene capital',
+            subregion: country.subregion,
+            area: country.area,
+            population: country.population
+        }
     });
     return newArr;
 };
@@ -22,7 +22,7 @@ const getCountriesApi = async() => {
     if(!countriesDatabase.length) {
         const apiCountriesRaw = (await axios.get('http://localhost:5000/countries')).data;
         const apiCountries = cleanPropsCountries(apiCountriesRaw);
-        console.log(apiCountries);
+        //console.log(apiCountries);
         apiCountries.forEach(async(country) => {
             await Country.create({ 
             id: country.id,

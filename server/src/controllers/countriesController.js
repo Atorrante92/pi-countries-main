@@ -11,7 +11,7 @@ const getCountryById = async(id) => {
                 attributes: []
             }
         }
-        });
+    });
     if(country) {
         return country;
     }
@@ -31,7 +31,30 @@ const getCountryByName = async(name) => {
 };
 
 const getAllCountries = async() => {
-    const countries = await Country.findAll();
+    const countriesRaw = await Country.findAll(                 
+        {include:
+        {
+            model: Activity,
+            attributes: ['name'],
+            as: 'Activities',
+            through: {
+                attributes: []
+            }
+        }
+    });
+    const countries = countriesRaw.map(country => {
+        return {
+            id: country.id,
+            name: country.name,
+            flags: country.flags,
+            continents: country.continents,
+            capital: country.capital,
+            subregion: country.subregion,
+            area: country.area,
+            population: country.population,
+            Activities: country.Activities.map(activity => activity.name)
+        }
+    });
     return countries;
 };
 

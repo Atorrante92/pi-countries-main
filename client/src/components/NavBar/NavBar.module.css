@@ -1,0 +1,8 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  /* ubica equidistantemente los elementos, lo pongo por ahora porque después voy a gregar una SearchBar */
+    border-radius: 15px;
+    border: 2px solid black;
+    /* background-color: blue; TRUCO: Para saber donde estoy parado*/
+}

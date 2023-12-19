@@ -1,0 +1,39 @@
+.landingImage{
+    width: 100%;                            /*El 100% del ancho del contenedor*/
+    height: 100%;                           /*El 100% de la altura del contenedor*/
+    object-fit: cover;                      /*Para cubrir completamente el contenedor*/
+}
+
+/* .mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.landingButton{
+    width: 250px;
+    height: 80px;
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 5px solid rgb(61, 7, 16);
+    border-radius: 50px;
+    /* display: inherit;
+    align-items: inherit;
+    justify-content: inherit; */
+    cursor: pointer;
+}
+
+.linkStyle{
+    color: inherit;
+    /* display: inherit;
+    align-items: inherit;
+    justify-content: inherit; */
+    text-decoration: none;
+}
+
+
+
+

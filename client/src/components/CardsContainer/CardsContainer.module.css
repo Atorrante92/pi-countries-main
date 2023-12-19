@@ -1,0 +1,8 @@
+.container{
+    border: 1px solid rgb(222, 23, 23);
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    flex-wrap: wrap;        /* Cuando llega al lado derecho final de la pantalla, continúa hacia abajo */
+    gap: 1em;               /* Separa un poco los datos */
+};
